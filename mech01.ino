@@ -15,12 +15,12 @@ void setup(){
 }
 void loop(){
   val = buttonB.isPressed();
-  if( (val == 1) && (old_val == 0)){
+  if((val == 1) && (old_val == 0)){
     state = 1 - state;
     delay(10);
   }
   old_val = val;
-  if( state == 1){
+  if(state == 1){
     ledYellow(1);
   }else{
     ledYellow(0);
