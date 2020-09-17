@@ -4,7 +4,7 @@
 Zumo32U4ButtonA buttonA;
 Zumo32U4ButtonB buttonB;
 Zumo32U4LCD lcd;
-int current_button_state = 0;  // ボタンの状態
+int current_button_state = 0;  // ボタンの現在の状態
 int old_button_state = 0;      // ボタンの古い状態
 int led_state = 0;             // LEDの状態
 void setup(){
