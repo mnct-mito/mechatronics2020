@@ -1,4 +1,5 @@
 // メカトロニクス演習2 第1回 サンプルプログラム
+// ボタンBでLEDのON/OFFを制御するプログラムの一例
 
 #include <Zumo32U4.h>
 Zumo32U4ButtonA buttonA;
