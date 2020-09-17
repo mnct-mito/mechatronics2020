@@ -4,9 +4,9 @@
 Zumo32U4ButtonA buttonA;
 Zumo32U4ButtonB buttonB;
 Zumo32U4LCD lcd;
-int val = 0;     // ボタンの状態
-int old_val = 0; // ボタンの古い状態
-int state = 0;   // LEDの状態
+int current_button_state = 0;  // ボタンの状態
+int old_button_state = 0;      // ボタンの古い状態
+int led_state = 0;             // LEDの状態
 void setup(){
   lcd.clear();
   lcd.print(F("Press A"));
@@ -14,13 +14,13 @@ void setup(){
   lcd.clear();
 }
 void loop(){
-  val = buttonB.isPressed();
-  if((val == 1) && (old_val == 0)){
-    state = 1 - state;
+  current_button_state = buttonB.isPressed();
+  if((current_button_state == 1) && (old_button_state == 0)){
+    led_state = 1 - led_state;
     delay(10);
   }
-  old_val = val;
-  if(state == 1){
+  old_button_state = current_button_state;
+  if(led_state == 1){
     ledYellow(1);
   }else{
     ledYellow(0);
