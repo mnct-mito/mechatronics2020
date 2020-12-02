@@ -1,5 +1,5 @@
 // メカトロニクス演習2 第1回 サンプルプログラム
-// ボタンBでLEDのON/OFFを制御するプログラムの一例
+// ボタンAでLEDのON/OFFを制御するプログラムの一例
 
 #include <Zumo32U4.h>
 Zumo32U4ButtonA buttonA;
@@ -10,7 +10,7 @@ int old_button_state = 0;      // ボタンの古い状態
 int led_state = 0;             // LEDの状態
 void setup(){
   lcd.clear();
-  lcd.print(F("Press B"));
+  lcd.print(F("Press A"));
   buttonA.waitForButton();
   lcd.clear();
 }
