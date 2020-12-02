@@ -10,7 +10,7 @@ int old_button_state = 0;      // ボタンの古い状態
 int led_state = 0;             // LEDの状態
 void setup(){
   lcd.clear();
-  lcd.print(F("Press A"));
+  lcd.print(F("Press B"));
   buttonA.waitForButton();
   lcd.clear();
 }
