@@ -44,7 +44,7 @@ void move_turn(int Speed_L, int Speed_R, int E_Counter){
   do{
     countsLeft  = encoders.getCountsLeft( );  // 左
     countsRight = encoders.getCountsRight( ); // 右
-  }while(countsLeft < 2600); // 値は要調整
+  }while(countsLeft < E_Counter); // 値は要調整
   motors.setSpeeds( 0, 0 ); 
 }
 
